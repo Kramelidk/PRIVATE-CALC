@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 250px;
+    text-align: center;
+}
+
+#ThePercent{
+    margin-top: 10%;
+    color: dodgerblue;
+    animation: rainbow 5s linear infinite;
+    font-size: 50px;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+}
+
+#official{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8%;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 40px;
+    animation: staticAnim 5s infinite ease-in-out;
+}
+
+#hide{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    left: 35%;
+    right: 35%;
+    top: 40%;
+    z-index: 10;
+    animation-fill-mode: both;
+    background-color: #fff;
+}
+
+.balls{
+    animation: visible1 2s linear;
+}
+
+@keyframes visible1{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes staticAnim{
+    0% {
+        transform: rotate(-5deg);
+      }
+      49% {
+        transform: rotate(5deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+      100% {
+        transform: rotate(-5deg);
+      }
+}
+
+@keyframes rainbow{
+    from{
+        filter: hue-rotate(0deg);
+    }
+    to{
+        filter: hue-rotate(360deg);
+    }
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigger Calculator</title>
+</head>
+<body>
+
+    <h1 id="official">Nigger Calculator</h1>
+
+    <label for="myInput">Enter name</label>
+	<input type="text" id="myInput">
+
+	<button id="theButton" onclick="getValue()">Calculate</button>
+
+    <h1 id="ThePercent">You are 0</h1>
+
+    <div id="hide"></div>
+
+	<script>
+
+        var percent = document.getElementById('ThePercent');
+        var button = document.getElementById('theButton');
+        var theHide = document.getElementById('hide');
+
+        //var number = Math.round(Math.random()* 100);
+
+		function getValue() {
+
+            theHide.classList.remove('balls');
+			
+            var number = Math.round(Math.random()* 100);
+
+            percent.innerHTML = "You are " + number + "% a nigger!";
+
+            theHide.classList.add('balls');
+
+		}
+	</script>
+    
+</body>
+</html>
