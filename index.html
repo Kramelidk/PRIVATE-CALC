@@ -111,6 +111,8 @@ body{
         var percent = document.getElementById('ThePercent');
         var button = document.getElementById('theButton');
         var theHide = document.getElementById('hide');
+        var theInput = document.getElementById('myInput');
+        var inputValue = theInput.Value;
 
         //var number = Math.round(Math.random()* 100);
 
@@ -123,6 +125,10 @@ body{
             percent.innerHTML = "You are " + number + "% a nigger!";
 
             theHide.classList.add('balls');
+          
+            if(inputValue === "dangirdas"){
+                  percent.innerHTML = "You are 1000% a nigger";
+            };
 
 		}
 	</script>
