@@ -54,6 +54,14 @@ body{
     animation: visible1 2s linear;
 }
 
+p{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    animation: rainbow 5s linear infinite;
+    color: dodgerblue;
+}
+
 @keyframes visible1{
     from{
         opacity: 1;
@@ -106,29 +114,34 @@ body{
 
     <div id="hide"></div>
 
+    <p>Version 1.0.2</p>
+
 	<script>
 
         var percent = document.getElementById('ThePercent');
         var button = document.getElementById('theButton');
         var theHide = document.getElementById('hide');
-        var theInput = document.getElementById('myInput');
-        var inputValue = theInput.Value;
 
         //var number = Math.round(Math.random()* 100);
 
 		function getValue() {
 
             theHide.classList.remove('balls');
+
+            var theInput = document.getElementById('myInput');
+            var inputValue = theInput.value;
 			
             var number = Math.round(Math.random()* 100);
-
-            percent.innerHTML = "You are " + number + "% a nigger!";
+          
+            if(inputValue === "dangirdas" ||inputValue === "Dangirdas" ||inputValue === "dangirtas" ||inputValue === "Dangirtas" ||inputValue === "dugirdas" ||inputValue === "dugirtas" ||inputValue === "daugirdas" ||inputValue === "Daugirdas" ||inputValue === "dougirdas" ||inputValue === "Dougirdas" ||inputValue === "dangirdas"){
+                  percent.innerHTML = "You are 1000% a nigger";
+            } else if ( inputValue === ""){
+                percent.innerHTML = "what"
+            } else {
+                percent.innerHTML = "You are " + number + "% a nigger!";
+            }
 
             theHide.classList.add('balls');
-          
-            if(inputValue === "dangirdas"){
-                  percent.innerHTML = "You are 1000% a nigger";
-            };
 
 		}
 	</script>
